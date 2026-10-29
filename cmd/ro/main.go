@@ -86,7 +86,7 @@ func registerFlags() {
 }
 
 func readLine(prompt string) (line string, err error) {
-	fmt.Fprintf(os.Stderr, prompt)
+	fmt.Fprint(os.Stderr, prompt)
 	rd := bufio.NewReader(os.Stdin)
 	line, err = rd.ReadString('\n')
 	if err != nil {
